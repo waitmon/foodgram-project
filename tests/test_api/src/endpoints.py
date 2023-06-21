@@ -22,19 +22,12 @@ class RecipesEndpoints:
 
 class ShoppingListEndpoints:
     """Endpoint for shopping list CRUD operations"""
-    url_shopping_list = f'http://127.0.0.1:8000/api/recipes/{id}/shopping_cart'
     url_download_shopping_list = 'http://127.0.0.1:8000/api/recipes/download_shopping_cart/'
-
-
-class FavoritesEndpoints:
-    """Endpoint for favorites creating/deleting"""
-    url_favorite = f'http://127.0.0.1:8000/api/recipes/{id}/favorite'
 
 
 class IngredientsEndpoints:
     """Endpoints for ingredients getting"""
     url_ingredients_list = 'http://127.0.0.1:8000/api/ingredients/'
-    url_get_ingredient_id = f'http://127.0.0.1:8000/api/ingredients/{id}/'
 
 
 class SubscriptionsEndpoints:

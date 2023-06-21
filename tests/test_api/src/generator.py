@@ -26,4 +26,3 @@ class UserDataGenerator:
         fake = Faker()
         return fake.ascii_free_email()
 
-# print(UserDataGenerator.username())
