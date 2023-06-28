@@ -153,6 +153,7 @@ class TestUsers:
                            'Accept': 'application/json',
                            'Authorization': f"Token {data['auth_token']}"
                            }
+            with allure.step('4. Logout from user profile'):
                 logout = requests.post(url=UsersEndpoints.url_logout, headers=headers)
             with allure.step('4. Asserting 204 status code'):
                 assert logout.status_code == 204, f'Expected 204 status code, got {logout.status_code} instead'

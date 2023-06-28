@@ -41,7 +41,8 @@ class TestSubscriptions:
                 assert subscribe_id['id'] == actual_subscription_data['id']
             with allure.step('7. Validating response JSON schema'):
                 assert S(RequestSamplesSchemas.json_schema_user_subscription) == actual_subscription_data, \
-                    f'Expected {S(RequestSamplesSchemas.json_schema_user_subscription)}, got {data} instead'
+                    f'Expected {S(RequestSamplesSchemas.json_schema_user_subscription)}, ' \
+                    f'got {actual_subscription_data} instead'
 
         @allure.title('Test case: Make subscription to the user itself')
         @pytest.mark.regression
@@ -163,7 +164,7 @@ class TestSubscriptions:
 
             @allure.title('Test case: Get subscription list without authorization')
             @pytest.mark.regression
-            def test_get_subscription_list_without_token(self):
+            def test_get_subscription_list_without_auth_token(self):
                 with allure.step('1. Sending request without passing Token in headers'):
                     response = requests.get(url=SubscriptionsEndpoints.url_subscription_list,
                                             json=UsersPayloads.empty_json, headers='')
