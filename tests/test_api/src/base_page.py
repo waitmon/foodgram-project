@@ -31,6 +31,6 @@ class BasicHttpMethods:
         return response
 
     @staticmethod
-    def delete(url, cookies):
-        response = requests.delete(url, headers=BasicHttpMethods.headers, cookies=cookies)
+    def delete(url):
+        response = requests.delete(url, headers=BasicHttpMethods.headers)
         return response

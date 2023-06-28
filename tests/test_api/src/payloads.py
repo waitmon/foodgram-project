@@ -84,3 +84,41 @@ class UsersPayloads:
         "new_password": "!Apitest100500!",
         "current_password": "apitest4343"
     }
+
+
+class RecipesPayloads:
+    new_recipe = {
+        "ingredients": [
+            {
+                "id": 2,
+                "amount": 10
+            }
+        ],
+        "tags": [
+            1,
+            2
+        ],
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAgMAAABieywaAAAACVBMVEUAAAD///9fX1"
+                 "/S0ecCAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNoAAAAggCByxOyYQAAAABJRU5ErkJggg==",
+        "name": "Greek Tabbouleh Salad Arepas",
+        "text": "Fusion cuisine",
+        "cooking_time": 30
+    }
+
+    update_recipe = {
+        "ingredients": [
+            {
+                "id": 2,
+                "amount": 10
+            }
+        ],
+        "tags": [
+            1,
+            2
+        ],
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAgMAAABieywaAAAACVBMVEUAAAD///9fX1"
+                 "/S0ecCAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAACklEQVQImWNoAAAAggCByxOyYQAAAABJRU5ErkJggg==",
+        "name": "Borscht",
+        "text": "Slavic cuisine",
+        "cooking_time": 60
+    }
