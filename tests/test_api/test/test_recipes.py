@@ -217,7 +217,7 @@ class TestRecipes:
                 assert delete_req.status_code == 204, f'Expected 204 status code, ' \
                                                       f'got {delete_req.status_code} instead'
 
-        @allure.title('Test case: Repeated Deleting of created recipe')
+        @allure.title('Test case: Repeatedly delete created recipe')
         @pytest.mark.regression
         def test_repeated_recipe_delete(self):
             with allure.step('1. Getting token for existed user'):
